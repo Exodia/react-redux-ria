@@ -37,7 +37,7 @@ store需要知道如何处理来自列表组件的action，所以我们需要传
 
 ```javascript
 import { createStore, combineReducers } from 'redux'
-import { reducer as listReducer } from 'redux-list'
+import { reducer as listReducer } from '@react-redux-ria/redux-list'
 
 const rootReducer = combineReducers({
   // ...其他reducer
@@ -63,7 +63,7 @@ listData是一个ListState数据结构，包含着当前列表的状态信息，
 ```javascript
 import React, {PureComponent} from 'react';
 import ReactDOM from 'react-dom';
-import reduxList from 'redux-list';
+import reduxList from '@react-redux-ria/redux-list';
 import {Table} from 'antd';
 
 const tableFields = [
