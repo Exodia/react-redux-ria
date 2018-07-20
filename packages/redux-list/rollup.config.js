@@ -4,7 +4,6 @@
  */
 import babel from 'rollup-plugin-babel';
 import {uglify} from 'rollup-plugin-uglify';
-import flow from 'rollup-plugin-flow';
 
 const babelRuntime = [
   'babel-runtime/helpers/defineProperty',
@@ -32,33 +31,8 @@ const config = {
     }
   },
   plugins: [
-    flow(),
     babel({
-      babelrc: false,
-      presets: [
-        [
-          'env',
-          {
-            modules: false,
-            useBuiltIns: true,
-            targets: {
-              browsers: [
-                '>1%',
-                'last 4 versions',
-                'Firefox ESR',
-                'not ie < 9'
-              ]
-            }
-          }
-        ],
-        'stage-2'
-      ],
-      exclude: 'node_modules/**',
-      plugins: [
-        'transform-object-rest-spread',
-        'transform-runtime',
-        'external-helpers'
-      ],
+      exclude: 'node_modules/!**',
       runtimeHelpers: true
     })
   ],

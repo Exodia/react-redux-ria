@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reduxList HOC Test basic list actions 1`] = `
+<div
+  list={
+    Object {
+      "fetch": [Function],
+      "updateFilters": [Function],
+      "updatePager": [Function],
+      "updateResults": [Function],
+      "updateSelections": [Function],
+    }
+  }
+  listData={
+    Object {
+      "filters": Object {},
+      "loading": true,
+      "pager": undefined,
+      "results": Array [],
+      "selections": Array [],
+    }
+  }
+/>
+`;

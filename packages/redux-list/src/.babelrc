@@ -1,0 +1,48 @@
+{
+  "presets": [
+    "flow",
+    [
+      "env",
+      {
+        "modules": false,
+        "useBuiltIns": true,
+        "targets": {
+          "browsers": [
+            ">1%",
+            "last 4 versions",
+            "Firefox ESR",
+            "not ie < 9"
+          ]
+        }
+      }
+    ],
+    "stage-2"
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-runtime",
+    "external-helpers"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "env",
+          {
+            "useBuiltIns": true,
+            "targets": {
+              "browsers": [
+                ">1%",
+                "last 4 versions",
+                "Firefox ESR",
+                "not ie < 9"
+              ]
+            }
+          }
+        ],
+        "stage-2",
+        "react"
+      ]
+    }
+  }
+}

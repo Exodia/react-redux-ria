@@ -19,7 +19,8 @@ const getInitialState = (): ListState => ({
   results: [],
   selections: [],
   loading: false,
-  filters: {}
+  filters: {},
+  pager: undefined
 });
 
 export default function reducer(state: ReduxListState = {}, action: Action): ReduxListState {
